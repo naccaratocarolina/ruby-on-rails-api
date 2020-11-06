@@ -7,3 +7,4 @@
 #   Character.create(name: 'Luke', movie: movies.first)
 
 Owner.create(name: "Bob")
+Cat.create(name: "Mina", motto: "Born to rule", owner_id: 1)
