@@ -8,3 +8,4 @@
 
 Owner.create(name: "Bob")
 Cat.create(name: "Mina", motto: "Born to rule", owner_id: 1)
+Fact.create(fact: "Um fato", cat_id: 1)

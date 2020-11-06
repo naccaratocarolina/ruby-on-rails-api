@@ -1,18 +1,11 @@
 class CatsController < ApplicationController
   skip_before_action :verify_authenticity_token
-  before_action :find_owner, only: [:list, :show, :create, :update, :destroy]
-  before_action :find_owner_cat, only: [:list, :show, :update, :destroy]
-
-  # Lista todos os gatinhos registrados no banco de dados
-  # GET /cats
-  def index
-    @cats = Cat.all
-    render json: @cats
-  end
+  before_action :find_owner, only: [:index, :show, :create, :update, :destroy]
+  before_action :find_owner_cat, only: [:index, :show, :update, :destroy]
 
   # Lista todos os gatinhos de determinado owner
   # GET /owners/:owner_id/cats
-  def list
+  def index
     render json: @owner.cats
   end
 
