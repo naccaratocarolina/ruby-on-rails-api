@@ -3,12 +3,6 @@ class AddressesController < ApplicationController
   before_action :find_owner, only: [:show, :create, :update, :destroy]
   before_action :find_owner_address, only: [:show, :update, :destroy]
 
-  # GET /addresses
-  def index
-    @addresses = Address.all
-    render json: @addresses
-  end
-
   # GET /owners/:owner_id/addresses
   def show
     render json: @address
