@@ -42,16 +42,6 @@ class OwnersController < ApplicationController
     end
   end
 
-  # GET /owners/:id/address
-  def address
-    render json: @owner.address
-  end
-
-  # GET /owners/:id/cats
-  def cats
-    render json: @owner.cats
-  end
-
   private
 
   # Funcao que inicializa os parametros necessarios para criar um owner
